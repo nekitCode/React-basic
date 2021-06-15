@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            border: 2px solid;
+            width: 600px;
+            text-align: center;
+        }
+
+        .heading {
+            color: yellow;
+        }
+
+        .description {
+            font-size: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+
+        const root = document.createElement('div');
+        root.setAttribute('id', 'root');
+
+        document.body.append(root);
+
+        const divElement = document.createElement('div');
+        divElement.className = 'wrapper';
+
+        root.append(divElement);
+
+        const h1Element = document.createElement('h1');
+        h1Element.textContent = 'Andersen' 
+        h1Element.className = 'heading'; 
+        
+        const pElement = document.createElement('p');
+        pElement.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae explicabo ipsa maxime doloribus aut nisi officia, ea tempore dignissimos pariatur nemo libero provident dolor. Eum debitis fugiat harum a nostrum!'
+        pElement.className = 'description';
+
+        divElement.append(h1Element, pElement);
+
+    </script>
+</body>
+</html> 

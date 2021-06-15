@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            border: 2px solid;
+            width: 600px;
+            text-align: center;
+        }
+
+        .heading {
+            color: yellow;
+        }
+
+        .description {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+    <script type="text/babel">
+        const rootElement = document.createElement('div');
+        rootElement.setAttribute('id', 'root');
+
+        document.body.append(rootElement);
+
+        function Header({title}) {
+            return (
+                <h1 className='heading'>
+                    {title}
+                </h1>
+            )
+        }
+
+        function Descrition() {
+            return (
+                <p className='description'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae explicabo ipsa maxime doloribus aut nisi officia, ea tempore dignissimos pariatur nemo libero provident dolor. Eum debitis fugiat harum a nostrum!
+                </p>
+            )
+        }
+
+        function App() {
+            return (
+                <div className='wrapper'>
+                    <Header title='Andersen'/>
+                    <Descrition />
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App />, rootElement);
+    
+    </script>
+</body>
+
+</html>
